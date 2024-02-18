@@ -9,7 +9,7 @@ import {
 } from "./functions.js";
 
 export const start = async () => {
-  // function to prompt the user to enter an English paragraph and select an option
+  // prompt the user to enter an English paragraph and select an option
   const { paragraph, selectedOption } = await inquirer.prompt([
     {
       name: "paragraph",
@@ -40,7 +40,6 @@ export const start = async () => {
       color: "green",
     });
   }
-  //   continueOrQuit();
 };
 
 await displayTitleAndTagline();
