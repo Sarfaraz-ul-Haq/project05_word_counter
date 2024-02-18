@@ -46,11 +46,12 @@ const start = async () => {
 };
 
 // function to ask user to use or quit the app
-export const continueOrQuit = async () => {
+const continueOrQuit = async () => {
   const options = await inquirer.prompt({
     name: "selected",
     type: "list",
     choices: ["Use the app again", "Quit app"],
+    message: chalk.green(`\nSelect an option`),
   });
   if (options.selected == "Use the app again") {
     start();
