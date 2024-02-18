@@ -1,6 +1,5 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
-import start from "./app.js";
 import showBanner from "node-banner";
 import { createSpinner } from "nanospinner";
 
@@ -41,18 +40,4 @@ export const counterSpinner = async (message: { [key: string]: any }) => {
   setTimeout(() => {
     spinner.success(message);
   }, 3000);
-};
-
-// function to ask user to use or quit the app
-export const continueOrQuit = async () => {
-  const options = await inquirer.prompt({
-    name: "selected",
-    type: "list",
-    choices: ["Use the app again", "Quit app"],
-  });
-  if (options.selected == "Continue") {
-    start();
-  } else {
-    thanks();
-  }
 };

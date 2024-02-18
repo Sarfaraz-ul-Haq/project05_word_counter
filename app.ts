@@ -5,7 +5,6 @@ import {
   countWordsInParagraph,
   countCharactersInParagraph,
   counterSpinner,
-  continueOrQuit,
 } from "./functions.js";
 
 const start = async () => {
@@ -41,9 +40,22 @@ const start = async () => {
       color: "green",
     });
   }
+  continueOrQuit();
+};
+
+// function to ask user to use or quit the app
+export const continueOrQuit = async () => {
+  const options = await inquirer.prompt({
+    name: "selected",
+    type: "list",
+    choices: ["Use the app again", "Quit app"],
+  });
+  if (options.selected == "Use the app again") {
+    await start();
+  } else {
+    thanks();
+  }
 };
 
 await displayTitleAndTagline();
 start();
-
-export default start;
