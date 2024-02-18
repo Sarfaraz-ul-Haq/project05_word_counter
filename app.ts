@@ -41,7 +41,6 @@ const start = async () => {
       color: "green",
     });
   }
-  continueOrQuit();
 };
 
 // function to ask user to use or quit the app
@@ -60,3 +59,4 @@ export const continueOrQuit = async () => {
 
 await displayTitleAndTagline();
 start();
+continueOrQuit();
