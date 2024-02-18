@@ -32,7 +32,7 @@ const start = async () => {
       ),
       color: "green",
     });
-    continueOrQuit;
+    continueOrQuit();
   } else if (selectedOption === "Count the characters") {
     const numberOfCharacters = countCharactersInParagraph(paragraph);
     await counterSpinner({
@@ -53,7 +53,7 @@ export const continueOrQuit = async () => {
     choices: ["Use the app again", "Quit app"],
   });
   if (options.selected == "Use the app again") {
-    await start();
+    start();
   } else {
     thanks();
   }

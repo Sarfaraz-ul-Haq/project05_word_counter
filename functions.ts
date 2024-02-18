@@ -35,9 +35,10 @@ export const countCharactersInParagraph = (paragraph: string): number => {
 
 // spinner function
 export const counterSpinner = async (message: { [key: string]: any }) => {
-  const spinner = createSpinner(chalk.red(`Counting...`)).start();
-
-  setTimeout(() => {
-    spinner.success(message);
-  }, 3000);
+  return new Promise((resolve) => {
+    const spinner = createSpinner(chalk.red(`Counting...`)).start();
+    setTimeout(() => {
+      spinner.success(message);
+    }, 3000);
+  });
 };
