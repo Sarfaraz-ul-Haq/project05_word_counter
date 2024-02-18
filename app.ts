@@ -8,7 +8,7 @@ import {
   continueOrQuit,
 } from "./functions.js";
 
-export const start = async () => {
+const start = async () => {
   // prompt the user to enter an English paragraph and select an option
   const { paragraph, selectedOption } = await inquirer.prompt([
     {
@@ -44,3 +44,5 @@ export const start = async () => {
 
 await displayTitleAndTagline();
 start();
+
+export default start;

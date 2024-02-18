@@ -1,6 +1,6 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
-import { start } from "./app.js";
+import start from "./app.js";
 import showBanner from "node-banner";
 import { createSpinner } from "nanospinner";
 
@@ -23,8 +23,8 @@ export const thanks = async () => {
 
 // function to find number of words in a paragraph
 export const countWordsInParagraph = (paragraph: string): number => {
-  const words = paragraph.split(" ");
-  return words.length;
+  const wordsArr = paragraph.split(" ");
+  return wordsArr.length;
 };
 
 // function to find number of characters in a paragraph
