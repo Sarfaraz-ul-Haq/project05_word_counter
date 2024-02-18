@@ -58,5 +58,5 @@ export const continueOrQuit = async () => {
 };
 
 await displayTitleAndTagline();
-start();
+await start();
 continueOrQuit();
