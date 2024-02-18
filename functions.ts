@@ -30,8 +30,8 @@ export const countWordsInParagraph = (paragraph: string): number => {
 // function to find number of characters in a paragraph
 export const countCharactersInParagraph = (paragraph: string): number => {
   paragraph = paragraph.replace(/ /g, "");
-  const characters = paragraph.split("");
-  return characters.length;
+  const charactersArr = paragraph.split("");
+  return charactersArr.length;
 };
 
 // spinner function
