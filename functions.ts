@@ -9,7 +9,7 @@ export const displayTitleAndTagline = async () => {
   await showBanner(
     `      Word Counter`,
     `  This CLI app can be used to count the number of words and characters in a paragraph
-   ________________________________________________________________________`,
+   ___________________________________________________________________________________`,
     "green",
     "gray"
   );
