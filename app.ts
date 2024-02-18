@@ -2,6 +2,7 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 import {
   displayTitleAndTagline,
+  thanks,
   countWordsInParagraph,
   countCharactersInParagraph,
   counterSpinner,
