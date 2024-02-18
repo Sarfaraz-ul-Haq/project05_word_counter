@@ -1,6 +1,6 @@
 {
   "name": "sarfaraz-word-counter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple TypeScript / Node.js project that counts the characters and words (excluding whitespaces) in an English paragraph entered by the user.",
   "main": "dist/app.js",
   "type": "module",
