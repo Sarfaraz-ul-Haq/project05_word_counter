@@ -23,6 +23,7 @@ const start = async () => {
       message: chalk.green(`\n Select an option`),
     },
   ]);
+  // execute the selected operation
   if (selectedOption === "Count the words") {
     const numOfWords = countWordsInParagraph(paragraph);
     counterSpinner({
