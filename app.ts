@@ -26,20 +26,22 @@ const start = async () => {
   // execute the selected operation
   if (selectedOption === "Count the words") {
     const numOfWords = countWordsInParagraph(paragraph);
-    counterSpinner({
+    await counterSpinner({
       text: chalk.gray(
         `The number of words in given paragraph is: ${numOfWords}`
       ),
       color: "green",
     });
+    continueOrQuit;
   } else if (selectedOption === "Count the characters") {
     const numberOfCharacters = countCharactersInParagraph(paragraph);
-    counterSpinner({
+    await counterSpinner({
       text: chalk.gray(
         `The number of characters in given paragraph is: ${numberOfCharacters}`
       ),
       color: "green",
     });
+    continueOrQuit();
   }
 };
 
@@ -58,5 +60,4 @@ export const continueOrQuit = async () => {
 };
 
 await displayTitleAndTagline();
-await start();
-continueOrQuit();
+start();
