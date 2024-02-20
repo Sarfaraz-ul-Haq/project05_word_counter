@@ -2,15 +2,14 @@
 
 import inquirer from "inquirer";
 import chalk from "chalk";
-import {
-  displayTitleAndTagline,
-  thanks,
-  countWordsInParagraph,
-  countCharactersInParagraph,
-  counterSpinner,
-} from "./functions.js";
+import { startingApp } from "./startingApp.js";
+import { displayTitleAndTagline } from "./displayTitle.js";
+import { counterSpinner } from "./countingSpinner.js";
+import { countWordsInParagraph } from "./countWords.js";
+import { countCharactersInParagraph } from "./countCharacters.js";
+import { continueOrQuit } from "./useOrQuit.js";
 
-const start = async () => {
+export const main = async () => {
   // prompt the user to enter an English paragraph and select an option
   const { paragraph, selectedOption } = await inquirer.prompt([
     {
@@ -47,20 +46,6 @@ const start = async () => {
   }
 };
 
-// function to ask user to use or quit the app
-const continueOrQuit = async () => {
-  const options = await inquirer.prompt({
-    name: "selected",
-    type: "list",
-    choices: ["Use the app again", "Quit app"],
-    message: chalk.green(`\nSelect an option`),
-  });
-  if (options.selected == "Use the app again") {
-    start();
-  } else {
-    thanks();
-  }
-};
-
+await startingApp();
 await displayTitleAndTagline();
-start();
+main();
